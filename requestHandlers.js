@@ -10,7 +10,7 @@ function start(res) {
   return "Hello start";*/
   var content = "empty";
   exec("ls -lah", function (error, stdout, stderr) {
-      res.writeHead(200,{"Content-Type": "text/plain"});
+      res.writeHead(200,{"Content-Type": "text/plain; charset=utf-8"});
       res.write(stdout);
       res.end();
       });
@@ -18,7 +18,7 @@ function start(res) {
 }
 function upload(res) {
   console.log("Request handler 'upload' was called.");
-  res.writeHead(200,{"Content-Type": "text/plain"});
+  res.writeHead(200,{"Content-Type": "text/plain; charset=utf-8"});
   res.write("Hello upload");
   res.end();
 }
